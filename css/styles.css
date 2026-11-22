@@ -577,7 +577,7 @@ button, input, select { font: inherit; color: inherit; }
 .hero__art { position: absolute; inset: 0; z-index: 1; }
 .flightbox { position: absolute; inset-block-start: 0.4rem; inset-inline-end: 0.6rem; inline-size: 380px; block-size: 96px; overflow: hidden; }
 .flightbox svg { display: block; max-width: 100%; }
-.leaf--hero { position: absolute; inset-block-end: 5.5rem; inset-inline-start: 1rem; opacity: .9; }
+.leaf--hero { position: absolute; inset-block-start: auto; inset-block-end: 4.4rem; inset-inline-end: 0.6rem; inset-inline-start: auto; opacity: .85; }
 .stickers { position: absolute; inset: 0; z-index: 1; }
 .sticker {
   position: absolute;
@@ -590,19 +590,23 @@ button, input, select { font: inherit; color: inherit; }
   box-shadow: 0 8px 18px rgba(0, 0, 0, .18);
   animation: floaty 4.5s ease-in-out infinite;
 }
-.sticker--a { inset-block-start: 16%; inset-inline-end: 7%; transform: rotate(-8deg); color: #0f6e64; }
-.sticker--b { inset-block-start: 34%; inset-inline-start: 6%; transform: rotate(7deg); animation-delay: .6s; color: #8a5a00; }
-.sticker--c { inset-block-end: 28%; inset-inline-end: 10%; transform: rotate(-4deg); animation-delay: 1s; color: var(--orange); }
+.sticker--a { inset-block-start: 0.7rem; inset-inline-end: 0.7rem; transform: rotate(-7deg); color: #0f6e64; }
+.sticker--b { inset-block-start: 3.1rem; inset-inline-end: 1.6rem; transform: rotate(6deg); animation-delay: .6s; color: #6d4a00; }
+.sticker--c { inset-block-start: 5.5rem; inset-inline-end: 0.55rem; transform: rotate(-4deg); animation-delay: 1s; color: var(--orange); }
 .wave { position: absolute; inset-inline: 0; inset-block-end: -1px; z-index: 1; inline-size: 100%; block-size: 54px; }
 .leaf--corner { position: absolute; inset-block-start: auto; inset-block-end: -0.8rem; inset-inline-end: -0.5rem; inline-size: 64px; opacity: .35; }
 
 .mood, .route-sec { position: relative; overflow: hidden; }
 .mood-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.7rem; }
 .mood-tile {
-  min-block-size: 6.2rem;
+  min-block-size: 8.6rem;
   border: 0;
   border-radius: 16px;
-  background: var(--tile);
+  background-color: var(--tile);
+  background-image:
+    radial-gradient(circle at 18% 22%, rgba(255,255,255,.35) 0 10px, transparent 11px),
+    radial-gradient(circle at 82% 78%, rgba(255,255,255,.22) 0 18px, transparent 19px),
+    repeating-linear-gradient(135deg, rgba(255,255,255,.14) 0 8px, transparent 8px 16px);
   color: #fff;
   font-weight: 800;
   font-size: 1.15rem;
@@ -610,9 +614,10 @@ button, input, select { font: inherit; color: inherit; }
   display: grid;
   align-content: center;
   justify-items: center;
-  gap: 0.2rem;
+  gap: 0.15rem;
   box-shadow: var(--shadow);
 }
+.mood-tile .ico { font-size: 3.4rem; line-height: 1; }
 .mood-tile[data-mood="family"] { color: #222; }
 .mood-tile.is-on { box-shadow: 0 0 0 3px #222; }
 .itinerary {
@@ -640,30 +645,20 @@ button, input, select { font: inherit; color: inherit; }
   top: var(--y);
   transform: translate(-50%, -50%);
   border: 0;
-  background: transparent;
+  background: #fff;
   color: #14342c;
   font-weight: 800;
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   white-space: nowrap;
   cursor: pointer;
-  min-inline-size: 2.4rem;
-  min-block-size: 2.4rem;
-  padding: 1rem 0.2rem 0;
+  min-block-size: 1.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .14);
+  z-index: 2;
 }
-.pin::before {
-  content: "";
-  position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: 50%;
-  inline-size: 12px;
-  block-size: 12px;
-  margin-inline-start: -6px;
-  border-radius: 50%;
-  background: var(--orange);
-  box-shadow: 0 0 0 0 rgba(199, 62, 0, .45);
-  animation: pulse 1.8s ease-out infinite;
-}
-.pin.is-on { color: var(--orange); }
+.pin.is-on { background: var(--orange); color: #fff; }
+.map-svg .map-dot { transform-box: fill-box; transform-origin: center; }
 .map-card {
   display: grid;
   grid-template-columns: 116px 1fr;
@@ -795,9 +790,14 @@ button, input, select { font: inherit; color: inherit; }
   .stop:nth-child(even) .stop__body { margin-inline-start: 8%; }
 }
 
+@media (max-width: 1000px) {
+  .leaf--hero { display: none; }
+}
 @media (max-width: 700px) {
-  .sticker--b, .sticker--c, .compass, .spark, .leaf--hero { display: none; }
-  .flightbox { transform: scale(0.58); transform-origin: top right; }
+  .flightbox { transform: scale(0.55); transform-origin: top left; }
+}
+@media (max-width: 600px) {
+  .stickers { display: none; }
 }
 
 @media (prefers-reduced-motion: no-preference) {

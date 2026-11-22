@@ -79,7 +79,7 @@
         </div>
         <div class="stickers" aria-hidden="true">
           <span class="sticker sticker--a">مرشد عربي</span>
-          <span class="sticker sticker--b">حلال مضمون</span>
+          <span class="sticker sticker--b">مطاعم حلال قريبة</span>
           <span class="sticker sticker--c">دعم واتساب</span>
         </div>
         <div class="hero__content">
@@ -114,12 +114,12 @@
           <p class="demo-note">مثال لخط سير، ونرتّبه معكم على واتساب.</p>
         </div>
         <div class="mood-grid">
-          <button class="mood-tile is-on" type="button" data-mood="relax" aria-pressed="true" style="--tile:#14998c">🏖️<span>استرخاء</span></button>
-          <button class="mood-tile" type="button" data-mood="adventure" aria-pressed="false" style="--tile:#146b48">🧗<span>مغامرة</span></button>
-          <button class="mood-tile" type="button" data-mood="family" aria-pressed="false" style="--tile:#e6b325">👨‍👩‍👧<span>عائلة</span></button>
-          <button class="mood-tile" type="button" data-mood="honeymoon" aria-pressed="false" style="--tile:#9d3c55">💑<span>شهر عسل</span></button>
-          <button class="mood-tile" type="button" data-mood="shop" aria-pressed="false" style="--tile:#3d7ea6">🛍️<span>تسوق</span></button>
-          <button class="mood-tile" type="button" data-mood="food" aria-pressed="false" style="--tile:#c73e00">🍜<span>أكل</span></button>
+          <button class="mood-tile is-on" type="button" data-mood="relax" aria-pressed="true" style="--tile:#0f766e"><span class="ico" aria-hidden="true">🏖️</span><span>استرخاء</span></button>
+          <button class="mood-tile" type="button" data-mood="adventure" aria-pressed="false" style="--tile:#146b48"><span class="ico" aria-hidden="true">🧗</span><span>مغامرة</span></button>
+          <button class="mood-tile" type="button" data-mood="family" aria-pressed="false" style="--tile:#e6b325"><span class="ico" aria-hidden="true">👨‍👩‍👧</span><span>عائلة</span></button>
+          <button class="mood-tile" type="button" data-mood="honeymoon" aria-pressed="false" style="--tile:#9d3c55"><span class="ico" aria-hidden="true">💑</span><span>شهر عسل</span></button>
+          <button class="mood-tile" type="button" data-mood="shop" aria-pressed="false" style="--tile:#1d4e89"><span class="ico" aria-hidden="true">🛍️</span><span>تسوق</span></button>
+          <button class="mood-tile" type="button" data-mood="food" aria-pressed="false" style="--tile:#c73e00"><span class="ico" aria-hidden="true">🍜</span><span>أكل</span></button>
         </div>
         <article class="itinerary" id="mood-plan" aria-live="polite">
           <p class="itinerary__kicker" id="mood-kicker">٤ أيام · استرخاء</p>
@@ -182,18 +182,46 @@
         </div>
         <div class="map-layout">
           <div class="map-stage">
-            <svg class="map-svg" viewBox="0 0 800 480" role="img" aria-label="خريطة مبسّطة لماليزيا">
-              <rect width="800" height="480" rx="28" fill="#e5f6f3"/>
-              <path fill="#7dcea0" d="M230 62c48-28 110-8 124 42 18 62-8 96 12 150 22 60-8 118-40 168-28 36-78 22-92-22-22-68-48-112-36-176 8-48-12-96 32-162z"/>
-              <path fill="#5dbe8a" d="M168 48c14-10 34-6 36 12 2 16-12 26-28 22-14-4-20-20-8-34z"/>
-              <path fill="#2f9e6b" d="M500 168c70-42 196-24 220 58 22 78-28 150-120 156-86 6-132-46-128-112 4-52 8-78 28-102z"/>
+            <svg class="map-svg" viewBox="0 0 980 380" role="img" aria-label="خريطة مبسّطة لماليزيا: شبه الجزيرة وبورنيو">
+              <defs>
+                <pattern id="seaWaves" width="56" height="18" patternUnits="userSpaceOnUse">
+                  <path d="M0 11 Q14 4 28 11 T56 11" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1.3"/>
+                </pattern>
+              </defs>
+              <rect width="980" height="380" rx="24" fill="#cfeae4"/>
+              <rect width="980" height="380" rx="24" fill="url(#seaWaves)"/>
+              <path fill="#63c48a" stroke="#e9fff4" stroke-width="3" stroke-linejoin="round" d="M104.5 73.7 L108.1 97 L138.1 91.6 L152.9 72.9 L163.3 77.2 L190.1 104.5 L209.1 134.9 L211.7 165.5 L206.9 186.1 L211.3 201.7 L214.6 228.6 L230.6 241.1 L248.5 281.2 L247.6 296.5 L215.4 299.5 L172.5 265.9 L118.8 229.9 L113.5 206.8 L87.3 176.5 L81 138.9 L64.7 114.2 L69.6 81.1 L59.6 61.9 L67.5 53.8 Z"/>
+              <path fill="#3fa876" stroke="#e9fff4" stroke-width="3" stroke-linejoin="round" d="M900.4 152 L867 167.5 L827.7 159.8 L775.5 159.8 L759.8 211.4 L742.3 227.2 L719.1 290.3 L682.1 299.9 L639.2 287.2 L617.4 291.2 L591 314.1 L562 310.9 L532.7 320.1 L501.7 294.5 L494.1 264.1 L527.4 279.7 L562.4 271.2 L571.6 232.8 L590.9 224.2 L645.3 214.4 L677.9 178.5 L700.1 149.9 L720.8 173.4 L730.3 157.9 L752 159.3 L754.6 130.4 L756.7 108 L791.6 76.5 L814.5 41 L832.9 40.9 L856.2 63.8 L858.2 83.5 L888.1 96.2 L926 109.8 L922.7 127.6 L892.3 129.9 Z"/>
+              <ellipse cx="44.4" cy="65.7" rx="16" ry="10" fill="#63c48a" stroke="#e9fff4" stroke-width="2"/>
+              <ellipse cx="62.6" cy="111.1" rx="12" ry="8" fill="#63c48a" stroke="#e9fff4" stroke-width="2"/>
+              <polyline points="44.4,65.7 62.6,111.1 121.5,151.9 137.4,200 132.9,212.3 157.8,255.4" fill="none" stroke="#c73e00" stroke-width="1.6" stroke-dasharray="2 5" stroke-linecap="round" opacity=".85"/>
+              <line x1="210" y1="40" x2="44.4" y2="65.7" stroke="#8aa8a2" stroke-width="1"/>
+              <line x1="220" y1="115" x2="62.6" y2="111.1" stroke="#8aa8a2" stroke-width="1"/>
+              <line x1="320" y1="150" x2="121.5" y2="151.9" stroke="#8aa8a2" stroke-width="1"/>
+              <line x1="340" y1="230" x2="137.4" y2="200" stroke="#8aa8a2" stroke-width="1"/>
+              <line x1="30" y1="220" x2="132.9" y2="212.3" stroke="#8aa8a2" stroke-width="1"/>
+              <line x1="50" y1="320" x2="157.8" y2="255.4" stroke="#8aa8a2" stroke-width="1"/>
+              <g fill="#c73e00">
+                <circle cx="44.4" cy="65.7" r="4.2"/>
+                <circle cx="62.6" cy="111.1" r="4.2"/>
+                <circle cx="121.5" cy="151.9" r="4.2"/>
+                <circle cx="137.4" cy="200" r="4.2"/>
+                <circle cx="132.9" cy="212.3" r="4.2"/>
+                <circle cx="157.8" cy="255.4" r="4.2"/>
+              </g>
+              <g transform="translate(470 78)" fill="none" stroke="#0f6e64" stroke-width="1.6">
+                <circle r="16" fill="rgba(255,255,255,.55)"/>
+                <path d="M0 -12 V12 M-12 0 H12" />
+                <path d="M0 -12 l4 6 h-8 z" fill="#0f6e64" stroke="none"/>
+                <path d="M0 6 h6 l-3 6 z" fill="#c73e00" stroke="none"/>
+              </g>
             </svg>
-            <button class="pin is-on" type="button" style="--x:27%;--y:58%" data-pin="kl" aria-pressed="true">كوالالمبور</button>
-            <button class="pin" type="button" style="--x:16%;--y:12%" data-pin="lang" aria-pressed="false">لنكاوي</button>
-            <button class="pin" type="button" style="--x:20%;--y:30%" data-pin="penang" aria-pressed="false">بينانغ</button>
-            <button class="pin" type="button" style="--x:40%;--y:46%" data-pin="genting" aria-pressed="false">جنتينغ</button>
-            <button class="pin" type="button" style="--x:34%;--y:34%" data-pin="cameron" aria-pressed="false">كاميرون</button>
-            <button class="pin" type="button" style="--x:24%;--y:76%" data-pin="malacca" aria-pressed="false">ملاكا</button>
+            <button class="pin is-on" type="button" style="--x:3.1%;--y:57.9%" data-pin="kl" aria-pressed="true">كوالالمبور</button>
+            <button class="pin" type="button" style="--x:21.4%;--y:10.5%" data-pin="lang" aria-pressed="false">لنكاوي</button>
+            <button class="pin" type="button" style="--x:22.4%;--y:30.3%" data-pin="penang" aria-pressed="false">بينانغ</button>
+            <button class="pin" type="button" style="--x:34.7%;--y:60.5%" data-pin="genting" aria-pressed="false">جنتينغ</button>
+            <button class="pin" type="button" style="--x:32.7%;--y:39.5%" data-pin="cameron" aria-pressed="false">كاميرون</button>
+            <button class="pin" type="button" style="--x:5.1%;--y:84.2%" data-pin="malacca" aria-pressed="false">ملاكا</button>
           </div>
           <article class="map-card" id="map-card">
             <img id="map-photo" src="img/klcc-520.webp" srcset="img/klcc-520.webp 520w, img/klcc-960.webp 960w" width="960" height="640" alt="حديقة وأبراج في كوالالمبور.">
