@@ -25,7 +25,8 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap">
+  <script>document.documentElement.classList.add("js");</script>
   <link rel="preload" as="image" href="img/hero-800.webp" imagesrcset="img/hero-800.webp 800w, img/hero-1400.webp 1400w" imagesizes="100vw">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -56,6 +57,31 @@
       <section class="hero" aria-labelledby="hero-title">
         <img class="hero__media" src="img/hero-800.webp" srcset="img/hero-800.webp 800w, img/hero-1400.webp 1400w" sizes="100vw" width="1400" height="941" alt="أبراج بتروناس في كوالالمبور عند الغروب." fetchpriority="high" decoding="async">
         <div class="hero__shade" aria-hidden="true"></div>
+        <div class="hero__art" aria-hidden="true">
+          <div class="flightbox">
+            <svg viewBox="0 0 380 96" width="380" height="96">
+              <path d="M8 70 C 70 18, 140 82, 210 34 S 320 16, 368 58" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"/>
+              <circle cx="28" cy="24" r="12" fill="#f6c445"/>
+              <circle cx="36" cy="18" r="10" fill="rgba(255,255,255,.2)"/>
+              <path d="M70 30c16 7 24 7 38 0" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+              <path d="M96 46c14 6 22 6 34 0" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".75"/>
+              <path d="M250 18l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="#f6c445"/>
+              <g fill="#fff">
+                <path d="M0 0l14 4-4 3 6 1-2 3-5-1-2 4-3-5-5 1 1-5z"/>
+                <animateMotion dur="9s" repeatCount="indefinite" rotate="auto" path="M8 70 C 70 18, 140 82, 210 34 S 320 16, 368 58"/>
+              </g>
+              <circle cx="330" cy="70" r="18" fill="none" stroke="#f6c445" stroke-width="3"/>
+              <path d="M330 56l4 14-4 3-4-3z" fill="#fff"/>
+              <path d="M330 86l-4-14 4-3 4 3z" fill="#1a9b8e"/>
+            </svg>
+          </div>
+          <svg class="leaf leaf--hero" viewBox="0 0 80 80" width="78" height="78"><path d="M10 70C30 20 70 8 74 10 60 50 30 74 10 70z" fill="#2f9e6b"/><path d="M18 64c16-20 34-34 50-46" fill="none" stroke="#145c3a" stroke-width="2"/></svg>
+        </div>
+        <div class="stickers" aria-hidden="true">
+          <span class="sticker sticker--a">مرشد عربي</span>
+          <span class="sticker sticker--b">حلال مضمون</span>
+          <span class="sticker sticker--c">دعم واتساب</span>
+        </div>
         <div class="hero__content">
           <h1 id="hero-title">عالمكم من الجولات<br>يبدأ من هنا</h1>
           <p>أنشطة وإقامة وتنقّل في ماليزيا وبالي. تختارون البطاقة، ونكمل التفاصيل على واتساب.</p>
@@ -65,6 +91,7 @@
             <button class="btn" type="submit">بحث</button>
           </form>
         </div>
+        <svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path fill="#fff" d="M0 36c120 28 240-20 360-8s240 36 360 16 240-40 360-16 240 28 360 8v34H0z"/></svg>
       </section>
 
       <section class="cats" aria-label="تصنيفات الأنشطة">
@@ -79,6 +106,35 @@
           <button class="cat" type="button" data-cat="honeymoon" aria-pressed="false"><span aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19s-6-3.6-6-8a3.5 3.5 0 0 1 6-2 3.5 3.5 0 0 1 6 2c0 4.4-6 8-6 8z"/></svg></span>شهر عسل</button>
         </div>
       </section>
+
+      <section class="section mood" id="moods" aria-labelledby="mood-title">
+        <svg class="leaf leaf--corner" viewBox="0 0 80 80" aria-hidden="true"><path d="M8 72C28 18 70 6 76 10 58 48 28 76 8 72z" fill="#2f9e6b" opacity=".85"/></svg>
+        <div class="section-head">
+          <h2 id="mood-title">اختاروا مزاج الرحلة</h2>
+          <p class="demo-note">مثال لخط سير، ونرتّبه معكم على واتساب.</p>
+        </div>
+        <div class="mood-grid">
+          <button class="mood-tile is-on" type="button" data-mood="relax" aria-pressed="true" style="--tile:#14998c">🏖️<span>استرخاء</span></button>
+          <button class="mood-tile" type="button" data-mood="adventure" aria-pressed="false" style="--tile:#146b48">🧗<span>مغامرة</span></button>
+          <button class="mood-tile" type="button" data-mood="family" aria-pressed="false" style="--tile:#e6b325">👨‍👩‍👧<span>عائلة</span></button>
+          <button class="mood-tile" type="button" data-mood="honeymoon" aria-pressed="false" style="--tile:#9d3c55">💑<span>شهر عسل</span></button>
+          <button class="mood-tile" type="button" data-mood="shop" aria-pressed="false" style="--tile:#3d7ea6">🛍️<span>تسوق</span></button>
+          <button class="mood-tile" type="button" data-mood="food" aria-pressed="false" style="--tile:#c73e00">🍜<span>أكل</span></button>
+        </div>
+        <article class="itinerary" id="mood-plan" aria-live="polite">
+          <p class="itinerary__kicker" id="mood-kicker">٤ أيام · استرخاء</p>
+          <h3 id="mood-name">بحر لنكاوي على مهل</h3>
+          <ol class="days" id="mood-days">
+            <li><strong>اليوم ١</strong> الوصول والشاطئ القريب من السكن.</li>
+            <li><strong>اليوم ٢</strong> تلفريك سكاي كاب من غير استعجال.</li>
+            <li><strong>اليوم ٣</strong> جولة جزر قصيرة والعودة قبل العصر.</li>
+            <li><strong>اليوم ٤</strong> صباح حر ثم المغادرة.</li>
+          </ol>
+          <a class="btn" id="mood-wa" href="https://wa.me/967783964784?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A8%D9%85%D8%B2%D8%A7%D8%AC%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B1%D8%AE%D8%A7%D8%A1." target="_blank" rel="noopener noreferrer">رتّبوا هذا المزاج على واتساب</a>
+        </article>
+      </section>
+
+      <div class="marquee" aria-hidden="true"><div class="marquee__track"><span>كوالالمبور · لنكاوي · بينانغ · جنتينغ · كاميرون · ملاكا · بالي · </span><span>كوالالمبور · لنكاوي · بينانغ · جنتينغ · كاميرون · ملاكا · بالي · </span></div></div>
 
       <section class="section" id="packages" aria-labelledby="promo-title">
         <div class="section-head">
@@ -122,6 +178,31 @@
       <section class="section" id="destinations" aria-labelledby="dest-title">
         <div class="section-head">
           <h2 id="dest-title">وجهات نرتّب لها</h2>
+          <p class="demo-note">خريطة مبسّطة لشبه الجزيرة وبورنيو.</p>
+        </div>
+        <div class="map-layout">
+          <div class="map-stage">
+            <svg class="map-svg" viewBox="0 0 800 480" role="img" aria-label="خريطة مبسّطة لماليزيا">
+              <rect width="800" height="480" rx="28" fill="#e5f6f3"/>
+              <path fill="#7dcea0" d="M230 62c48-28 110-8 124 42 18 62-8 96 12 150 22 60-8 118-40 168-28 36-78 22-92-22-22-68-48-112-36-176 8-48-12-96 32-162z"/>
+              <path fill="#5dbe8a" d="M168 48c14-10 34-6 36 12 2 16-12 26-28 22-14-4-20-20-8-34z"/>
+              <path fill="#2f9e6b" d="M500 168c70-42 196-24 220 58 22 78-28 150-120 156-86 6-132-46-128-112 4-52 8-78 28-102z"/>
+            </svg>
+            <button class="pin is-on" type="button" style="--x:27%;--y:58%" data-pin="kl" aria-pressed="true">كوالالمبور</button>
+            <button class="pin" type="button" style="--x:16%;--y:12%" data-pin="lang" aria-pressed="false">لنكاوي</button>
+            <button class="pin" type="button" style="--x:20%;--y:30%" data-pin="penang" aria-pressed="false">بينانغ</button>
+            <button class="pin" type="button" style="--x:40%;--y:46%" data-pin="genting" aria-pressed="false">جنتينغ</button>
+            <button class="pin" type="button" style="--x:34%;--y:34%" data-pin="cameron" aria-pressed="false">كاميرون</button>
+            <button class="pin" type="button" style="--x:24%;--y:76%" data-pin="malacca" aria-pressed="false">ملاكا</button>
+          </div>
+          <article class="map-card" id="map-card">
+            <img id="map-photo" src="img/klcc-520.webp" srcset="img/klcc-520.webp 520w, img/klcc-960.webp 960w" width="960" height="640" alt="حديقة وأبراج في كوالالمبور.">
+            <div>
+              <h3 id="map-name">كوالالمبور</h3>
+              <p id="map-text">أبراج، حدائق، وأسواق في يوم واحد إن شئتم الهدوء.</p>
+              <a class="btn btn--sm" id="map-wa" href="https://wa.me/967783964784?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%AA%D8%AE%D8%B7%D9%8A%D8%B7%20%D9%84%D8%B2%D9%8A%D8%A7%D8%B1%D8%A9%20%D9%83%D9%88%D8%A7%D9%84%D8%A7%D9%84%D9%85%D8%A8%D9%88%D8%B1." target="_blank" rel="noopener noreferrer">واتساب لهذه الوجهة</a>
+            </div>
+          </article>
         </div>
         <div class="rail-wrap">
           <button class="arrow arrow--prev" type="button" data-rail="dest-rail" data-dir="-1" aria-label="السابق"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 6l6 6-6 6"/></svg></button>
@@ -204,6 +285,21 @@
                 <div class="card__foot">
                   <p class="price">من <strong>RM 280</strong></p>
                   <a class="btn btn--sm" href="https://wa.me/967783964784?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%AD%D8%AC%D8%B2%3A%20%D8%A5%D9%82%D8%A7%D9%85%D8%A9%20%D9%81%D9%86%D8%AF%D9%82%D9%8A%D8%A9%20%D9%81%D9%8A%20%D9%83%D9%88%D8%A7%D9%84%D8%A7%D9%84%D9%85%D8%A8%D9%88%D8%B1." target="_blank" rel="noopener noreferrer">احجز عبر واتساب</a>
+                </div>
+              </div>
+            </article>
+            <article class="card" data-cat="sights" data-q="حديقة كوالالمبور سيتي سنتر klcc park">
+              <div class="card__media">
+                <img src="img/klcc-520.webp" srcset="img/klcc-520.webp 520w, img/klcc-960.webp 960w" sizes="(max-width: 1019px) 78vw, 25vw" width="960" height="640" alt="نافورة حديقة كوالالمبور سيتي سنتر." loading="lazy" decoding="async">
+                <button class="fav" type="button" data-fav="klcc" aria-pressed="false" aria-label="حفظ حديقة المدينة في المفضلة"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-9a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 4.6-7 9-7 9z"/></svg></button>
+              </div>
+              <div class="card__body">
+                <p class="card__meta">كوالالمبور · معالم</p>
+                <h3>نزهة في حديقة كوالالمبور سيتي سنتر</h3>
+                <div class="chips"><span class="chip">مرشد عربي</span></div>
+                <div class="card__foot">
+                  <p class="price">من <strong>RM 40</strong></p>
+                  <a class="btn btn--sm" href="https://wa.me/967783964784?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%AD%D8%AC%D8%B2%3A%20%D9%86%D8%B2%D9%87%D8%A9%20%D9%81%D9%8A%20%D8%AD%D8%AF%D9%8A%D9%82%D8%A9%20%D9%83%D9%88%D8%A7%D9%84%D8%A7%D9%84%D9%85%D8%A8%D9%88%D8%B1%20%D8%B3%D9%8A%D8%AA%D9%8A%20%D8%B3%D9%86%D8%AA%D8%B1." target="_blank" rel="noopener noreferrer">احجز عبر واتساب</a>
                 </div>
               </div>
             </article>
@@ -426,6 +522,111 @@
         <p id="empty" class="empty" hidden>لا توجد أنشطة مطابقة. اكتبوا ما تبحثون عنه في خانة البحث واضغطوا «بحث» لنرسل الطلب على واتساب، أو <a href="https://wa.me/967783964784?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D9%84%D8%AF%D9%8A%20%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%B1%D8%AD%D9%84%D8%A9%20%D9%85%D8%B9%20%D9%88%D9%83%D8%A7%D9%84%D8%A9%20%D8%B1%D8%AD%D9%84%D8%A9." target="_blank" rel="noopener noreferrer">راسلونا مباشرة</a>.</p>
       </div>
 
+      <div class="marquee" aria-hidden="true"><div class="marquee__track"><span>يوم في المدينة · بحر · شاي · معبد · تلفريك · نهر · </span><span>يوم في المدينة · بحر · شاي · معبد · تلفريك · نهر · </span></div></div>
+
+      <section class="section route-sec reveal" id="route" aria-labelledby="route-title">
+        <div class="section-head">
+          <h2 id="route-title">خط سير على مهل</h2>
+          <p class="demo-note">مثال لخمسة أيام، قابل للتعديل.</p>
+        </div>
+        <div class="route" id="route-line">
+          <svg class="route-svg" viewBox="0 0 8 100" preserveAspectRatio="none" aria-hidden="true"><path class="route-line" d="M4 0 V100" pathLength="1"/></svg>
+          <article class="stop">
+            <span class="stop__mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20h16M6 20V9l6-5 6 5v11"/></svg></span>
+            <div class="stop__body">
+              <p class="stop__day">اليوم ١</p>
+              <h3>كوالالمبور</h3>
+              <p>الأبراج وحديقة المدينة، ثم مساء هادئ قرب السكن.</p>
+              <img src="img/hero-800.webp" width="800" height="537" alt="أبراج بتروناس عند الغروب." loading="lazy" decoding="async">
+            </div>
+          </article>
+          <article class="stop">
+            <span class="stop__mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 16c3 0 3-3 6-3s3 3 6 3 3-3 6-3"/></svg></span>
+            <div class="stop__body">
+              <p class="stop__day">اليوم ٢</p>
+              <h3>بينانغ</h3>
+              <p>جورج تاون على الأقدام: جداريات ورصيف العشيرة.</p>
+              <img src="img/penang-520.webp" width="960" height="720" alt="شارع في جورج تاون." loading="lazy" decoding="async">
+            </div>
+          </article>
+          <article class="stop">
+            <span class="stop__mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 18l8-12 8 12"/><path d="M8 18h8"/></svg></span>
+            <div class="stop__body">
+              <p class="stop__day">اليوم ٣</p>
+              <h3>جنتينغ</h3>
+              <p>صعود سكاي واي والهواء الأبرد في المرتفع.</p>
+              <img src="img/gencable-480.webp" width="800" height="523" alt="عربات التلفريك في جنتينغ." loading="lazy" decoding="async">
+            </div>
+          </article>
+          <article class="stop">
+            <span class="stop__mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20c4-6 6-9 6-12a6 6 0 1 0-12 0c0 3 2 6 6 12z"/></svg></span>
+            <div class="stop__body">
+              <p class="stop__day">اليوم ٤</p>
+              <h3>كاميرون</h3>
+              <p>تلال الشاي ومشى قصير قبل الغداء.</p>
+              <img src="img/cameron-520.webp" width="960" height="640" alt="تلال الشاي في كاميرون." loading="lazy" decoding="async">
+            </div>
+          </article>
+          <article class="stop">
+            <span class="stop__mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 16c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2"/></svg></span>
+            <div class="stop__body">
+              <p class="stop__day">اليوم ٥</p>
+              <h3>لنكاوي</h3>
+              <p>البحر والتلفريك، ثم العودة حين يناسبكم.</p>
+              <img src="img/langkawi-520.webp" width="960" height="635" alt="جزر لنكاوي من الجو." loading="lazy" decoding="async">
+            </div>
+          </article>
+        </div>
+        <a class="btn" href="https://wa.me/967783964784?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%AE%D8%B7%20%D8%A7%D9%84%D8%B3%D9%8A%D8%B1%3A%20%D9%83%D9%88%D8%A7%D9%84%D8%A7%D9%84%D9%85%D8%A8%D9%88%D8%B1%20%D8%AB%D9%85%20%D8%AC%D9%86%D8%AA%D9%8A%D9%86%D8%BA%20%D8%AB%D9%85%20%D9%84%D9%86%D9%83%D8%A7%D9%88%D9%8A." target="_blank" rel="noopener noreferrer">عدّلوا هذا الخط على واتساب</a>
+      </section>
+
+      <section class="section reveal" id="postcards" aria-labelledby="post-title">
+        <div class="section-head">
+          <h2 id="post-title">بطاقات من الطريق</h2>
+        </div>
+        <div class="wall">
+          <figure class="polaroid"><img src="img/beach-520.webp" width="960" height="641" alt="شاطئ لنكاوي." loading="lazy" decoding="async"><figcaption>بحر على مهل</figcaption></figure>
+          <figure class="polaroid"><img src="img/boh-520.webp" width="960" height="640" alt="مزرعة شاي في كاميرون." loading="lazy" decoding="async"><figcaption>صباح الشاي</figcaption></figure>
+          <figure class="polaroid"><img src="img/malacca-480.webp" width="800" height="600" alt="نهر ملاكا." loading="lazy" decoding="async"><figcaption>مرآة النهر</figcaption></figure>
+          <figure class="polaroid"><img src="img/ulun-520.webp" width="960" height="1274" alt="معبد أولون دانو." loading="lazy" decoding="async"><figcaption>معبد على الماء</figcaption></figure>
+          <figure class="polaroid"><img src="img/jetty-520.webp" width="960" height="638" alt="رصيف العشيرة." loading="lazy" decoding="async"><figcaption>بيوت على الماء</figcaption></figure>
+          <figure class="polaroid"><img src="img/tanah-520.webp" width="960" height="640" alt="تاناه لوت." loading="lazy" decoding="async"><figcaption>غروب الصخرة</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="section reveal" id="tips" aria-labelledby="tips-title">
+        <div class="section-head">
+          <h2 id="tips-title">قبل أن تحزموا الحقيبة</h2>
+        </div>
+        <div class="tips">
+          <article class="tip">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="10" fill="#f6c445"/><path d="M24 6v6M24 36v6M6 24h6M36 24h6" stroke="#e6b325" stroke-width="3" stroke-linecap="round"/></svg>
+            <h3>أفضل وقت للزيارة</h3>
+            <p>الساحل الغربي أجف غالبًا من ديسمبر إلى مارس، والساحل الشرقي من مايو إلى سبتمبر. المرتفعات أبرد طوال السنة.</p>
+          </article>
+          <article class="tip">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="14" width="32" height="22" rx="4" fill="#1a9b8e"/><path d="M8 22h32" stroke="#fff" stroke-width="2"/><circle cx="16" cy="29" r="2" fill="#f6c445"/></svg>
+            <h3>العملة</h3>
+            <p>العملة الرسمية الرينغيت الماليزي، ويُكتب سعرها RM. الأسعار في هذا الموقع توضيحية للعرض فقط.</p>
+          </article>
+          <article class="tip">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="16" y="6" width="16" height="36" rx="3" fill="#3d7ea6"/><rect x="20" y="12" width="8" height="10" rx="1" fill="#fff"/></svg>
+            <h3>الشريحة</h3>
+            <p>تتوفر شرائح اتصال وخيارات eSIM في المطارات والمدن الكبرى، وتُفعَّل عادة في اليوم نفسه.</p>
+          </article>
+          <article class="tip">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M16 18h16l-2 22H18z" fill="#2f9e6b"/><path d="M18 18c0-6 12-6 12 0" fill="none" stroke="#145c3a" stroke-width="2"/></svg>
+            <h3>الملابس</h3>
+            <p>ملابس خفيفة للمدن والبحر. خذوا طبقة دافئة لكاميرون وجنتينغ، فالجو هناك أبرد وممطر أحيانًا.</p>
+          </article>
+          <article class="tip">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 20h28v6c0 8-6 14-14 14S10 34 10 26z" fill="#c73e00"/><path d="M16 20c0-6 16-6 16 0" fill="none" stroke="#8a2b00" stroke-width="2"/></svg>
+            <h3>المطاعم الحلال</h3>
+            <p>اللحوم الحلال شائعة في ماليزيا، وكثير من المطاعم توضح ذلك على اللافتة أو القائمة.</p>
+          </article>
+        </div>
+      </section>
+
       <section class="section" aria-labelledby="why-title">
         <div class="section-head">
           <h2 id="why-title">لماذا ترتّبون الرحلة معنا</h2>
@@ -451,12 +652,21 @@
       </section>
 
       <section class="section" id="plan" aria-labelledby="plan-title">
-        <div class="plan">
-          <div>
-            <h2 id="plan-title">رتّبوا رحلة على المقاس</h2>
-            <p class="lede">اكتبوا الوجهة والموعد. النموذج تجريبي، وزر واتساب يرسل نفس التفاصيل في رسالة.</p>
-          </div>
-          <div>
+        <div class="ticket-row">
+          <article class="pass">
+            <p class="pass__kicker">بطاقة صعود · تجريبية</p>
+            <h2 id="plan-title">من مدينتكم إلى كوالالمبور</h2>
+            <dl class="pass__meta">
+              <div><dt>من</dt><dd>مدينتكم</dd></div>
+              <div><dt>إلى</dt><dd>KUL</dd></div>
+              <div><dt>الرحلة</dt><dd>رحلة ٠١</dd></div>
+            </dl>
+            <svg class="barcode" viewBox="0 0 180 48" aria-hidden="true"><path stroke="#222" stroke-width="2" d="M4 4v40M10 4v40M14 4v40M22 4v40M26 4v40M34 4v40M40 4v40M48 4v40M52 4v40M60 4v40M68 4v40M74 4v40M82 4v40M86 4v40M96 4v40M102 4v40M110 4v40M118 4v40M124 4v40M134 4v40M140 4v40M150 4v40M156 4v40M166 4v40M174 4v40"/></svg>
+            <a class="btn" href="https://wa.me/967783964784?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D9%87%D8%B0%D9%87%20%D8%A8%D8%B7%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%B5%D8%B9%D9%88%D8%AF%20%D8%A7%D9%84%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%A9%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%AA%D8%B1%D8%AA%D9%8A%D8%A8%20%D8%A7%D9%84%D9%88%D8%B5%D9%88%D9%84%20%D8%A5%D9%84%D9%89%20%D9%83%D9%88%D8%A7%D9%84%D8%A7%D9%84%D9%85%D8%A8%D9%88%D8%B1." target="_blank" rel="noopener noreferrer">افتحوا واتساب لهذه البطاقة</a>
+          </article>
+          <div class="plan ticket">
+            <h3>تذكرة الطلب</h3>
+            <p class="lede">النموذج تجريبي. زر واتساب يرسل التفاصيل نفسها في رسالة.</p>
             <!-- Placeholder address for the demo. Replace info@example.com before any real use. -->
             <!-- TODO: replace your-email@example.com with the agency inbox before using this form. -->
             <form id="plan-form" action="https://formsubmit.co/your-email@example.com" method="POST">
